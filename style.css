@@ -1,6 +1,7 @@
+/* Reset and basic styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
   text-align: center;
   margin: 0;
   padding: 20px;
@@ -11,18 +12,20 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* Game board grid */
 #game {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  gap: 10px;
+  grid-gap: 10px;
   justify-content: center;
   margin: 20px auto;
 }
 
+/* Each cell in the grid */
 .cell {
   width: 100px;
   height: 100px;
-  background-color: #fff;
+  background-color: #ffffff;
   border: 2px solid #444;
   font-size: 2.5rem;
   display: flex;
@@ -34,26 +37,33 @@ h1 {
 }
 
 .cell:hover {
-  background-color: #e0e0e0;
+  background-color: #ddd;
 }
 
+.cell.taken {
+  cursor: default;
+}
+
+/* Message display */
 .message {
-  font-size: 1.2em;
-  color: green;
-  margin: 15px 0;
+  font-size: 1.2rem;
+  color: #2d862d;
+  margin-top: 15px;
 }
 
-button {
+/* Restart button */
+button#restartBtn {
+  margin-top: 15px;
   padding: 10px 20px;
-  font-size: 1em;
+  font-size: 1rem;
   background-color: #444;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
+button#restartBtn:hover {
   background-color: #222;
 }
