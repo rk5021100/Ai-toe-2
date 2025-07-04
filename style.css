@@ -1,69 +1,74 @@
-/* Reset and basic styles */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f0f0;
-  text-align: center;
+* {
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
-h1 {
-  color: #333;
-  margin-bottom: 20px;
+body {
+  background-color: #548687;
+  text-align: center;
 }
 
-/* Game board grid */
-#game {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-gap: 10px;
-  justify-content: center;
-  margin: 20px auto;
-}
-
-/* Each cell in the grid */
-.cell {
-  width: 100px;
-  height: 100px;
-  background-color: #ffffff;
-  border: 2px solid #444;
-  font-size: 2.5rem;
+.container {
+  height: 70vh;
   display: flex;
-  align-items: center;
+
   justify-content: center;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color 0.3s ease;
+  align-items: center;
 }
 
-.cell:hover {
-  background-color: #ddd;
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
 }
 
-.cell.taken {
-  cursor: default;
-}
-
-/* Message display */
-.message {
-  font-size: 1.2rem;
-  color: #2d862d;
-  margin-top: 15px;
-}
-
-/* Restart button */
-button#restartBtn {
-  margin-top: 15px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #444;
-  color: #fff;
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 8vmin;
+  color: #b0413e;
+  background-color: #ffffc7;
 }
 
-button#restartBtn:hover {
-  background-color: #222;
+#reset-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+}
+
+#new-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+}
+
+#msg {
+  color: #ffffc7;
+  font-size: 5vmin;
+}
+
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hide {
+  display: none;
 }
